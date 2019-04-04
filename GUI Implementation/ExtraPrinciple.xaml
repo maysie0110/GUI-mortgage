@@ -1,0 +1,414 @@
+﻿<Page x:Class="GUI_Implementation.ExtraPrinciple"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:GUI_Implementation"
+      mc:Ignorable="d" 
+      d:DesignHeight="1000" d:DesignWidth="800"
+      Title="ExtraPrinciple">
+    <Page.Resources>
+        <Style x:Key="OrangeButton" TargetType="{x:Type Button}">
+            <Setter Property="Width" Value="190" />
+            <Setter Property="Height" Value="40"/>
+            <Setter Property="FontSize" Value="18" />
+            <Setter Property="FontWeight" Value="Normal"/>
+            <Setter Property="FontFamily" Value="Century Gothic"/>
+            <Setter Property="FontStyle" Value="Italic"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Grid Width="{TemplateBinding Width}" Height="{TemplateBinding Height}" ClipToBounds="True">
+                            <Border x:Name="background" CornerRadius="20" BorderBrush="DarkBlue" BorderThickness="3">
+                                <Border.Background>
+                                    <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+                                        <GradientStop Color="#FFFFD190" Offset="0.2"/>
+                                        <GradientStop Color="Orange" Offset="0.85"/>
+                                        <GradientStop Color="#FFFFD190" Offset="1"/>
+                                    </LinearGradientBrush>
+                                </Border.Background>
+                            </Border>
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" Name="contentShadow">
+                                <ContentPresenter.RenderTransform>
+                                    <TranslateTransform X="0.5" Y="0.5" />
+                                </ContentPresenter.RenderTransform>
+                            </ContentPresenter>
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" Name="content"/>
+                        </Grid>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsPressed" Value="True">
+                                <Setter TargetName="content" Property="RenderTransform" >
+                                    <Setter.Value>
+                                        <TranslateTransform Y="2.0" />
+
+                                    </Setter.Value>
+                                </Setter>
+                            </Trigger>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter TargetName="background" Property="Background">
+                                    <Setter.Value>
+                                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                            <GradientStop Color="AliceBlue" Offset="0" />
+                                            <GradientStop Color="LightBlue" Offset="1" />
+                                        </LinearGradientBrush>
+                                    </Setter.Value>
+                                </Setter>
+
+                            </Trigger>
+
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <Style x:Key="GreenButton" TargetType="{x:Type Button}">
+            <Setter Property="Width" Value="190" />
+            <Setter Property="Height" Value="40"/>
+            <Setter Property="FontSize" Value="25" />
+            <Setter Property="FontWeight" Value="SemiBold"/>
+            <Setter Property="FontFamily" Value="Century Gothic"/>
+            <Setter Property="FontStyle" Value="Italic"/>
+            <Setter Property="Foreground" Value="DarkBlue"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Grid Width="{TemplateBinding Width}" Height="{TemplateBinding Height}" ClipToBounds="True">
+                            <Border x:Name="background" CornerRadius="20" BorderBrush="DarkBlue" BorderThickness="3">
+                                <Border.Background>
+                                    <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+                                        <GradientStop Color="LightGreen" Offset="0.2"/>
+                                        <GradientStop Color="MediumSeaGreen" Offset="0.85"/>
+                                        <GradientStop Color="MediumSeaGreen" Offset="1"/>
+                                    </LinearGradientBrush>
+                                </Border.Background>
+                            </Border>
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" Name="contentShadow">
+                                <ContentPresenter.RenderTransform>
+                                    <TranslateTransform X="0.5" Y="0.5" />
+                                </ContentPresenter.RenderTransform>
+                            </ContentPresenter>
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" Name="content"/>
+                        </Grid>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsPressed" Value="True">
+                                <Setter TargetName="content" Property="RenderTransform" >
+                                    <Setter.Value>
+                                        <TranslateTransform Y="2.0" />
+
+                                    </Setter.Value>
+                                </Setter>
+                            </Trigger>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter TargetName="background" Property="Background">
+                                    <Setter.Value>
+                                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                            <GradientStop Color="AliceBlue" Offset="0" />
+                                            <GradientStop Color="LightBlue" Offset="1" />
+                                        </LinearGradientBrush>
+                                    </Setter.Value>
+                                </Setter>
+
+                            </Trigger>
+
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <Style x:Key="BlueButton" TargetType="{x:Type Button}">
+            <Setter Property="Width" Value="190" />
+            <Setter Property="Height" Value="40"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Grid Width="{TemplateBinding Width}" Height="{TemplateBinding Height}" ClipToBounds="True">
+                            <Border x:Name="background" CornerRadius="20" BorderBrush="DarkBlue" BorderThickness="3">
+                                <Border.Background>
+                                    <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+                                        <GradientStop Color="AliceBlue" Offset="0.2"/>
+                                        <GradientStop Color="LightBlue" Offset="0.85"/>
+                                        <GradientStop Color="LightSkyBlue" Offset="1"/>
+                                    </LinearGradientBrush>
+                                </Border.Background>
+                            </Border>
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" Name="contentShadow">
+                                <ContentPresenter.RenderTransform>
+                                    <TranslateTransform X="0.5" Y="0.5" />
+                                </ContentPresenter.RenderTransform>
+                            </ContentPresenter>
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" Name="content"/>
+                        </Grid>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsPressed" Value="True">
+                                <Setter TargetName="content" Property="RenderTransform" >
+                                    <Setter.Value>
+                                        <TranslateTransform Y="2.0" />
+
+                                    </Setter.Value>
+                                </Setter>
+                            </Trigger>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter TargetName="background" Property="Background">
+                                    <Setter.Value>
+                                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                            <GradientStop Color="LightGray" Offset="0" />
+                                            <GradientStop Color="Gray" Offset="1" />
+                                        </LinearGradientBrush>
+                                    </Setter.Value>
+                                </Setter>
+
+                            </Trigger>
+
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Page.Resources>
+    <StackPanel Background="AliceBlue">
+        <Grid>
+            <!--<Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>-->
+
+            <Label x:Name="NewLabel" Content="Mortgage Details" HorizontalAlignment="Center"
+               Margin="152,60,118,0" VerticalAlignment="Top" Height="100" Width="530"
+               FontFamily="Century Gothic" FontSize="55"
+               FontStyle="Normal" FontWeight="DemiBold" Foreground="DarkBlue"/>
+
+
+            <Menu HorizontalAlignment="Left" VerticalAlignment="Top" Width="800" FontSize="15">
+                <MenuItem Header="Home" Click="Home_Click"></MenuItem>
+                <MenuItem Header="File">
+                    <MenuItem Header="New" HorizontalAlignment="Left" Width="180"
+                          Click="CreateNew_Click"/>
+
+                    <MenuItem Header="Open" HorizontalAlignment="Left" Width="180"
+                          Click="Open_Click"/>
+
+                    <MenuItem Header="Save" HorizontalAlignment="Left" Width="180"
+                          Click="Save_Click"/>
+                    <Separator HorizontalAlignment="Left" Width="200"/>
+
+                    <MenuItem Header="Default Principle" HorizontalAlignment="Left" Width="200"
+                          Click="Default_Click"/>
+                    <Separator HorizontalAlignment="Left" Width="200"/>
+
+                    <MenuItem Header="Reset" HorizontalAlignment="Left" Width="180"
+                          Click="Reset_Click"/>
+
+                    <MenuItem Header="Print" HorizontalAlignment="Left" Width="180"
+                          Click="Print_Click"/>
+
+                    <MenuItem Header="Help" HorizontalAlignment="Left" Width="180"
+                          Click="Help_Click"/>
+
+                    <MenuItem Header="Close" HorizontalAlignment="Left" Width="180"
+                          Click="Close_Click"/>
+                </MenuItem>
+
+                <MenuItem Header="Save" Click="Save_Click"></MenuItem>
+                <MenuItem Header="Print" Click="Print_Click"></MenuItem>
+                <MenuItem Header="Calculate" Click="Calculate_Click"></MenuItem>
+                <MenuItem Header="Help" Click="Help_Click">
+                    <MenuItem Header="About" Click="About_Click"/>
+                    <MenuItem Header="Contact Us" Click="ContactUs_Click"/>
+                </MenuItem>
+            </Menu>
+        </Grid>
+
+        <Grid Margin="0,15,0,0">
+            <Border Background="WhiteSmoke" CornerRadius="20" BorderThickness="2" BorderBrush="Gray" Margin="10,-18,10,-21">
+                <Border.Effect>
+                    <DropShadowEffect BlurRadius="8" ShadowDepth="5" Color="Gray"/>
+                </Border.Effect>
+            </Border>
+
+
+            <TextBlock x:Name = "amountBlock" HorizontalAlignment = "Left" FontWeight="Black" 
+         Margin = "110,0,0,0" TextWrapping = "Wrap" FontFamily="Century Gothic" FontStyle="Normal" FontSize="20"
+         Text = "Mortgage Amount" VerticalAlignment = "Top" />
+
+            <TextBlock x:Name = "interestBlock" HorizontalAlignment = "Left" FontWeight="Black" 
+         Margin = "110,50,0,0" TextWrapping = "Wrap" FontFamily="Century Gothic" FontStyle="Normal" FontSize="20"
+         Text = "Interest Rate" VerticalAlignment = "Top" />
+
+            <TextBlock x:Name="frequencyBlock" HorizontalAlignment="Left" FontWeight="Black" 
+         Margin = "110,100,0,0" TextWrapping = "Wrap" FontFamily="Century Gothic" FontStyle="Normal" FontSize="20"  
+         Text = "Payment Frequency" VerticalAlignment = "Top" />
+
+            <TextBlock x:Name="lengthBlock" HorizontalAlignment="Left" FontWeight="Black" 
+         Margin = "110,150,0,0" TextWrapping = "Wrap" FontFamily="Century Gothic" FontStyle="Normal" FontSize="20" 
+         Text = "Length of mortgage" VerticalAlignment = "Top" />
+
+            <TextBlock x:Name="paymentBlock" HorizontalAlignment="Left" FontWeight="Black" 
+         Margin = "110,200,0,0" TextWrapping = "Wrap" FontFamily="Century Gothic" FontStyle="Normal" FontSize="20" 
+         Text = "Payment amount" VerticalAlignment = "Top" />
+
+            <TextBlock x:Name="dueDate" HorizontalAlignment="Left" FontWeight="Black" 
+         Margin = "111,250,0,0" TextWrapping = "Wrap" FontFamily="Century Gothic" FontStyle="Normal" FontSize="20" 
+         Text = "Payment Due Date" VerticalAlignment = "Top" />
+
+
+
+            <TextBlock  x:Name="amountBox" HorizontalAlignment="Left" FontWeight="Black"
+         Margin = "450,0,0,0" Width="160"  Height ="30" VerticalAlignment = "Top"
+        FontFamily="Century Gothic" FontStyle="Normal" FontSize="22"/>
+
+
+            <TextBlock  x:Name="interestBox" HorizontalAlignment="Left" FontWeight="Black"
+         Margin = "450,50,0,0" Width="160"  Height ="30" VerticalAlignment = "Top"
+        FontFamily="Century Gothic" FontStyle="Normal" FontSize="22"/>
+
+
+            <TextBlock  x:Name="frequencyBox" HorizontalAlignment="Left" FontWeight="Black"
+         Margin = "450,100,0,0" Width="160"  Height ="30" VerticalAlignment = "Top"
+        FontFamily="Century Gothic" FontStyle="Normal" FontSize="22"/>
+
+            <TextBlock x:Name="rb1Box" HorizontalAlignment="Left" Text="Not Applicable" FontWeight="Black"
+         Margin = "450,150,0,0" Width="160"  Height ="30" VerticalAlignment = "Top"
+        FontFamily="Century Gothic" FontStyle="Normal" FontSize="22"/>
+
+            <TextBlock x:Name="rb2Box" HorizontalAlignment="Left" Text="Not Applicable" FontWeight="Black"
+         Margin = "450,200,0,0" Width="160"  Height ="30" VerticalAlignment = "Top"
+        FontFamily="Century Gothic" FontStyle="Normal" FontSize="22"/>
+
+            <TextBlock x:Name="dateBox" HorizontalAlignment="Left" FontWeight="Black"
+         Margin = "450,250,0,0" Width="150"  Height ="30" VerticalAlignment = "Top"
+        FontFamily="Century Gothic" FontStyle="Normal" FontSize="22"/>
+
+
+        </Grid>
+        <Grid Margin="0,40,0,0">
+            <Border Background="WhiteSmoke" CornerRadius="20" BorderThickness="2" BorderBrush="Gray" Margin="10,0,10,-21">
+                <Border.Effect>
+                    <DropShadowEffect BlurRadius="8" ShadowDepth="5" Color="Gray"/>
+                </Border.Effect>
+            </Border>
+            <TextBlock x:Name = "extraAmountBlock" HorizontalAlignment = "Left" FontWeight="Black"  
+         Margin = "110,25,0,0" TextWrapping = "Wrap" FontFamily="Century Gothic" FontSize="20"
+         Text = "Extra Principle Amount" VerticalAlignment = "Top" />
+
+            <TextBlock x:Name = "ExtraFreqBlock" HorizontalAlignment = "Left" FontWeight="Black"
+         Margin = "110,75,0,0" TextWrapping = "Wrap" FontFamily="Century Gothic" FontSize="20"
+         Text = "Extra Principle Payment Frequency" VerticalAlignment = "Top" Width="217" />
+
+            <TextBox x:Name = "extraAmtBox" HorizontalAlignment = "Left" FontSize="20"  
+         Margin = "450,25,0,0" VerticalAlignment = "Top" Width = "160" BorderBrush="Black" 
+         Height = "30" ToolTipService.ToolTip  =  "Enter extra principle amount"/>
+
+            <ComboBox x:Name="ExtrafrequencyBox" HorizontalAlignment="Left" Height="30" BorderBrush="Black" FontSize="20"
+         Margin = "450,75,0,0" Width="160" SelectionChanged="ExtrafrequencyBox_SelectionChanged" VerticalAlignment = "Top">
+
+                <ComboBoxItem Content="Once" />
+                <ComboBoxItem Content="Multiple" />
+                <ComboBoxItem Content="All" />
+            </ComboBox>
+
+
+            <TextBlock Visibility="Hidden" x:Name = "OnceFreqBlock" HorizontalAlignment = "Left" FontWeight="Black"   
+         Margin = "110,140,0,0" TextWrapping = "Wrap" FontFamily="Century Gothic" FontSize="20"
+         Text = "Extra Principle Due Date" VerticalAlignment = "Top" />
+
+            <DatePicker Visibility="Hidden" x:Name="ExtraDueDateBox" HorizontalAlignment="Center" Margin="275,140,0,0" Height="30" FontSize="20"
+         VerticalAlignment="Top" BorderBrush="Black" SelectedDateChanged="DatePicker_SelectedDateChanged" Width="160"/>
+
+            <TextBlock Visibility="Hidden" x:Name = "BeginFreqBlock" HorizontalAlignment = "Left" FontWeight="Black"  
+         Margin = "110,140,0,0" TextWrapping = "Wrap" FontFamily="Century Gothic" FontStyle="Normal" FontSize="20"
+         Text = "Extra Principle Begin Date" VerticalAlignment = "Top" RenderTransformOrigin="0.483,-0.905" />
+
+            <DatePicker Visibility="Hidden" x:Name="DueDateBegin" HorizontalAlignment="Center" Margin="275,140,0,0" Height="30" FontSize="18"
+         VerticalAlignment="Top" SelectedDateChanged="DatePicker_SelectedDateChanged" Width="162" BorderBrush="Black"/>
+
+            <TextBlock Visibility="Hidden" x:Name = "EndFreqBlock" HorizontalAlignment = "Left" FontWeight="Black"  
+         Margin = "110,190,0,0" TextWrapping = "Wrap" FontFamily="Century Gothic" FontSize="20"
+         Text = "Extra Principle End Date" VerticalAlignment = "Top" />
+
+            <DatePicker Visibility="Hidden" x:Name="DueDateEnd" HorizontalAlignment="Center" Margin="275,190,0,0" FontStyle="Normal" FontSize="18"
+         BorderBrush="Black"  VerticalAlignment="Top" SelectedDateChanged="DatePicker_SelectedDateChanged" Width="164"/>
+
+        </Grid>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <Button Grid.Column="0" x:Name = "applyButton" Content = "Default Principle" HorizontalAlignment = "Left"  
+         Margin="17,50,0,0" VerticalAlignment = "Top" Style="{StaticResource OrangeButton}"
+        ToolTipService.ToolTip = "Apply Default Principle Mortgage" Click="Default_Click"/>
+
+            <Button Grid.Column ="1" x:Name = "resetButton" Content = "Reset Calculator" HorizontalAlignment = "Left"  
+         Margin = "17,50,0,0" VerticalAlignment = "Top" Style="{StaticResource OrangeButton}"
+         ToolTipService.ToolTip = "Reset Calculator" Click="Reset_Click"/>
+
+            <Button Grid.Column ="2" x:Name = "button" Content = "Calculate" HorizontalAlignment = "Left"
+         Margin = "17,50,0,0" VerticalAlignment = "Top" Style="{StaticResource GreenButton}"
+         ToolTipService.ToolTip = "Calculate Mortgage" Click="Calculate_Click" />
+
+            <Button Width="60" Height="50" Grid.Column="2" Margin="20,110,0,0" Click="backButton_Click" ToolTipService.ToolTip="Return" 
+            Style="{StaticResource BlueButton}">
+                <Path Fill="Black" Data="M 3,3 l 9,19 l -9,19 Z" RenderTransformOrigin="0.66,0.503" Stretch="Fill" Width="17.964" Height="40.015" >
+                    <Path.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform Angle="180.222"/>
+                            <TranslateTransform X="-7.033" Y="-0.278"/>
+                        </TransformGroup>
+                    </Path.RenderTransform>
+                </Path>
+            </Button>
+
+        </Grid>
+
+        <!--<Grid Name="MultipleGrid" Visibility="Visible" Height="63">
+
+            <TextBlock x:Name = "BeginFreqBlock" Grid.Column="0" HorizontalAlignment = "Left" FontWeight="Black"  
+         Margin = "110,30,0,0" TextWrapping = "Wrap" FontFamily="Century Gothic" FontStyle="Normal" FontSize="20"
+         Text = "Extra Principle Begin Date" VerticalAlignment = "Top" RenderTransformOrigin="0.483,-0.905" />
+
+            <DatePicker x:Name="DueDateBegin" HorizontalAlignment="Center" Margin="452,25,183,0" Height="30" FontSize="20"
+         VerticalAlignment="Top" SelectedDateChanged="DatePicker_SelectedDateChanged" Width="160"/>
+
+            <TextBlock x:Name = "EndFreqBlock" Grid.Column="0" HorizontalAlignment = "Left"   
+         Margin = "101,20,0,0" TextWrapping = "Wrap" FontFamily="Century Gothic" FontStyle="Normal" FontSize="20"
+         Text = "Extra Principle Begin Date" VerticalAlignment = "Top" />
+
+            <DatePicker x:Name="DueDateEnd" HorizontalAlignment="Center" Margin="20,20,115,0"
+         VerticalAlignment="Top" SelectedDateChanged="DatePicker_SelectedDateChanged" Width="165"/>
+        </Grid>-->
+        <!--<Grid x:Name="OnceGrid" Visibility="Visible">
+
+            <TextBlock Visibility="Hidden" x:Name = "OnceFreqBlock" Grid.Column="0" HorizontalAlignment = "Left" FontWeight="Black"   
+         Margin = "110,30,0,0" TextWrapping = "Wrap" FontFamily="Century Gothic" FontStyle="Normal" FontSize="20"
+         Text = "Extra Principle Due Date" VerticalAlignment = "Top" />
+
+            <DatePicker x:Name="ExtraDueDateBox" HorizontalAlignment="Center" Margin="454,30,186,0" Height="30" FontSize="20"
+         VerticalAlignment="Top" BorderBrush="Black" SelectedDateChanged="DatePicker_SelectedDateChanged" Width="160"/>
+        </Grid>
+
+        <Grid Name="MultipleGrid" Visibility="Visible" Height="63">
+
+            <TextBlock x:Name = "BeginFreqBlock" Grid.Column="0" HorizontalAlignment = "Left" FontWeight="Black"  
+         Margin = "110,30,0,0" TextWrapping = "Wrap" FontFamily="Century Gothic" FontStyle="Normal" FontSize="20"
+         Text = "Extra Principle Begin Date" VerticalAlignment = "Top" RenderTransformOrigin="0.483,-0.905" />
+
+            <DatePicker x:Name="DueDateBegin" HorizontalAlignment="Center" Margin="452,25,183,0" Height="30" FontSize="20"
+         VerticalAlignment="Top" SelectedDateChanged="DatePicker_SelectedDateChanged" Width="160"/>
+
+            <TextBlock x:Name = "EndFreqBlock" Grid.Column="0" HorizontalAlignment = "Left"   
+         Margin = "101,20,0,0" TextWrapping = "Wrap" FontFamily="Century Gothic" FontStyle="Normal" FontSize="20"
+         Text = "Extra Principle Begin Date" VerticalAlignment = "Top" />
+
+            <DatePicker x:Name="DueDateEnd" HorizontalAlignment="Center" Margin="20,20,115,0"
+         VerticalAlignment="Top" SelectedDateChanged="DatePicker_SelectedDateChanged" Width="165"/>
+        </Grid>-->
+
+
+    </StackPanel>
+</Page>

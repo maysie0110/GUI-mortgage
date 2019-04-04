@@ -1,0 +1,25 @@
+C:\Users\May Trinh\Desktop\HCI\GUI Project\GUI Implementation\GUI Implementation\bin\Debug\GUI Implementation.exe.config
+C:\Users\May Trinh\Desktop\HCI\GUI Project\GUI Implementation\GUI Implementation\bin\Debug\GUI Implementation.exe
+C:\Users\May Trinh\Desktop\HCI\GUI Project\GUI Implementation\GUI Implementation\bin\Debug\GUI Implementation.pdb
+C:\Users\May Trinh\Desktop\HCI\GUI Project\GUI Implementation\GUI Implementation\obj\Debug\GUI Implementation.csprojAssemblyReference.cache
+C:\Users\May Trinh\Desktop\HCI\GUI Project\GUI Implementation\GUI Implementation\obj\Debug\HomePage.g.cs
+C:\Users\May Trinh\Desktop\HCI\GUI Project\GUI Implementation\GUI Implementation\obj\Debug\MainWindow.g.cs
+C:\Users\May Trinh\Desktop\HCI\GUI Project\GUI Implementation\GUI Implementation\obj\Debug\NewMortgageForm.g.cs
+C:\Users\May Trinh\Desktop\HCI\GUI Project\GUI Implementation\GUI Implementation\obj\Debug\App.g.cs
+C:\Users\May Trinh\Desktop\HCI\GUI Project\GUI Implementation\GUI Implementation\obj\Debug\GUI Implementation_MarkupCompile.cache
+C:\Users\May Trinh\Desktop\HCI\GUI Project\GUI Implementation\GUI Implementation\obj\Debug\GUI Implementation_MarkupCompile.lref
+C:\Users\May Trinh\Desktop\HCI\GUI Project\GUI Implementation\GUI Implementation\obj\Debug\HomePage.baml
+C:\Users\May Trinh\Desktop\HCI\GUI Project\GUI Implementation\GUI Implementation\obj\Debug\MainWindow.baml
+C:\Users\May Trinh\Desktop\HCI\GUI Project\GUI Implementation\GUI Implementation\obj\Debug\NewMortgageForm.baml
+C:\Users\May Trinh\Desktop\HCI\GUI Project\GUI Implementation\GUI Implementation\obj\Debug\GUI Implementation.g.resources
+C:\Users\May Trinh\Desktop\HCI\GUI Project\GUI Implementation\GUI Implementation\obj\Debug\GUI_Implementation.Properties.Resources.resources
+C:\Users\May Trinh\Desktop\HCI\GUI Project\GUI Implementation\GUI Implementation\obj\Debug\GUI Implementation.csproj.GenerateResource.cache
+C:\Users\May Trinh\Desktop\HCI\GUI Project\GUI Implementation\GUI Implementation\obj\Debug\GUI Implementation.csproj.CoreCompileInputs.cache
+C:\Users\May Trinh\Desktop\HCI\GUI Project\GUI Implementation\GUI Implementation\obj\Debug\GUI Implementation.exe
+C:\Users\May Trinh\Desktop\HCI\GUI Project\GUI Implementation\GUI Implementation\obj\Debug\GUI Implementation.pdb
+C:\Users\May Trinh\Desktop\HCI\GUI Project\GUI Implementation\GUI Implementation\obj\Debug\ExtraPrinciple.g.cs
+C:\Users\May Trinh\Desktop\HCI\GUI Project\GUI Implementation\GUI Implementation\obj\Debug\ExtraPrinciple.baml
+C:\Users\May Trinh\Desktop\HCI\GUI Project\GUI Implementation\GUI Implementation\obj\Debug\About.g.cs
+C:\Users\May Trinh\Desktop\HCI\GUI Project\GUI Implementation\GUI Implementation\obj\Debug\About.baml
+C:\Users\May Trinh\Desktop\HCI\GUI Project\GUI Implementation\GUI Implementation\obj\Debug\ResultForm.g.cs
+C:\Users\May Trinh\Desktop\HCI\GUI Project\GUI Implementation\GUI Implementation\obj\Debug\ResultForm.baml
